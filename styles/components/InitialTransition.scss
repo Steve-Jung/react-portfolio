@@ -1,0 +1,53 @@
+.page-transition {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+
+	.black-box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: $black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.svg-text {
+			position: absolute;
+			z-index: 50;
+			display: flex;
+
+			#pattern {
+				--text-opacity: 1;
+				color: rgba(255, 255, 255, var(--text-opacity));
+
+				.rect-fill-current {
+					width: 100%;
+					height: 100%;
+					fill: currentColor;
+				}
+				.motion-rect-fill-current {
+					width: 100%;
+					height: 100%;
+					fill: currentColor;
+					--text-opacity: 1;
+					color: rgba(75, 85, 99, var(--text-opacity));
+				}
+			}
+
+			.text-cover {
+				font-size: 2.5rem;
+				line-height: 2.25rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}

@@ -1,0 +1,146 @@
+.portfolio-page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	.page-header-wrap,
+	.page-footer-wrap {
+		position: relative;
+		width: 100%;
+		height: 400px;
+
+		.page-footer {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 0;
+			}
+		}
+
+		.page-header {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 0;
+			}
+
+			.container {
+				position: relative;
+				top: 260px;
+				z-index: 1;
+				background-color: none;
+
+				.page-title {
+					position: relative;
+					color: #fff;
+				}
+				.spec {
+					position: relative;
+					color: #fff;
+					margin-bottom: 18px;
+				}
+				.page-link {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 1.5em;
+					width: 70px;
+					height: 30px;
+					color: #fff;
+					background-color: rgba(255, 255, 255, 0.3);
+					border-radius: 15px;
+					border: 1px solid rgba(255, 255, 255, 0.2);
+					border-right-color: rgba(255, 255, 255, 0.1);
+					border-bottom-color: rgba(255, 255, 255, 0.1);
+					box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+					transition: background-color 0.25s ease-in-out;
+
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.6);
+					}
+				}
+			}
+		}
+	}
+
+	.content-wrap {
+		position: relative;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+
+		.content-description {
+			position: relative;
+			width: 100%;
+			margin-bottom: 60px;
+			font-size: 1.6em;
+			color: #4f504e;
+		}
+
+		.content-image-wrap {
+			width: 100%;
+			position: relative;
+
+			.content-image {
+				position: relative;
+				box-sizing: border-box;
+				line-height: 0;
+				margin-bottom: 120px;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-right-color: rgba(255, 255, 255, 0.1);
+				border-bottom-color: rgba(255, 255, 255, 0.1);
+
+				& > div {
+					position: absolute;
+					left: 50% !important;
+					transform: translateX(-50%) !important;
+					overflow: visible !important;
+				}
+
+				.image {
+					position: absolute;
+					object-fit: contain;
+					margin: 0 !important;
+					padding: 0 !important;
+					width: 100% !important;
+					height: unset !important;
+					box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+
+		.player {
+			width: 100%;
+			height: 400px;
+		}
+	}
+}

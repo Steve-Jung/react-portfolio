@@ -1,0 +1,151 @@
+@import './normalize.scss';
+@import './variables.scss';
+@import 'DatGui.scss';
+
+// Components
+@import './components/header.scss';
+@import './components/InitialTransition.scss';
+
+// Pages
+@import './pages/main.scss';
+@import './pages/profile.scss';
+@import './pages/blog.scss';
+@import './pages/portfolio.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+	box-sizing: border-box;
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
+}
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 10px;
+	// div {
+	// 	font-size: 1.6rem;
+	// }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 2.75rem 0 1.05rem;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.15;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 3.052em;
+}
+
+h2 {
+	font-size: 2.441em;
+}
+
+h3 {
+	font-size: 1.953em;
+}
+
+h4 {
+	font-size: 1.563em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	transition: ease-in-out 1s;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	span {
+		text-transform: uppercase;
+		font-size: 0.875rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+		display: block;
+		letter-spacing: 0.05rem;
+	}
+	.columns {
+		display: flex;
+		.column {
+			&:first-child {
+				margin-right: 2rem;
+				@media (max-width: 680px) {
+					margin-right: 8rem;
+				}
+			}
+		}
+	}
+	li {
+		list-style: none;
+		font-size: 0.875rem;
+		font-weight: 300;
+		color: $secondary;
+		margin-bottom: 0.5rem;
+		@media (max-width: 680px) {
+			margin-bottom: 0.75rem;
+		}
+		a {
+			color: $secondary;
+		}
+		&.disabled {
+			opacity: 0.4;
+		}
+	}
+}
+
+.no-drag {
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.container {
+	flex-grow: 1;
+	margin: 0 auto;
+	padding: 0 32px;
+	position: relative;
+	width: auto;
+	@media (min-width: 1024px) {
+		max-width: 960px;
+	}
+	@media (min-width: 1216px) {
+		max-width: 1152px;
+	}
+	@media (min-width: 1480px) {
+		max-width: 1244px;
+	}
+	&.fluid {
+		padding: 0;
+		margin: 0;
+		max-width: 100% !important;
+	}
+}
+
+.container-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
