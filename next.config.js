@@ -6,16 +6,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const TerserJSPlugin = require('terser-webpack-plugin');
 
-const debug = process.env.NODE_ENV !== 'production';
-
-const name = 'react-portfolio';
-
 module.exports = withPlugins(
   [withTM],
   [withBundleAnalyzer({
     distDir: '.next',
     compress: true,
-    assetPrefix: !debug ? `/${name}/` : '',
     optimization: {
       minimize: true,
       minimizer: [new TerserJSPlugin({
