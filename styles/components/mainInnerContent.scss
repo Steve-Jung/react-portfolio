@@ -1,0 +1,287 @@
+.main-content {
+	.inner-content-wrap {
+		position: relative;
+		color: #20272f;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding-right: 10px;
+
+		.inner-title {
+			position: relative;
+			width: 100%;
+			margin-bottom: 4px;
+
+			p {
+				margin: 0;
+				font-size: 1.6em;
+				font-weight: 600;
+				color: #662cec;
+
+				&:first-child {
+					margin: 0 0 16px;
+					color: #20272f;
+					font-size: 1.4em;
+				}
+			}
+		}
+
+		.inner-content-line {
+			width: 100%;
+			height: 1px;
+			background-color: rgba(0, 0, 0, 0.3);
+			margin: 8px 0px 16px;
+		}
+
+		.inner-contents {
+			position: relative;
+			border-radius: 16px;
+			background-color: rgba(255, 255, 255, 0.5);
+			width: 100%;
+			padding: 20px 14px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+
+			.inner-content-title {
+				margin-bottom: 8px;
+				font-size: 1.6em;
+				font-weight: 500;
+			}
+
+			.inner-content {
+				margin-bottom: 16px;
+				color: #4f504e;
+				font-weight: 300;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				.school {
+					margin: 0;
+					font-size: 1.4em;
+				}
+				.content-text {
+					margin: 0;
+					font-size: 1.4em;
+				}
+				.year-month {
+					font-size: 1.2em;
+					margin: 0;
+					font-weight: 400;
+					margin-bottom: 2px;
+				}
+				.company-name {
+					font-size: 1.8em;
+					font-weight: 500;
+					margin: 0;
+					margin-bottom: 2px;
+				}
+				.company-role {
+					margin: 0;
+					font-weight: 400;
+					margin-bottom: 2px;
+					font-size: 1.4em;
+				}
+				.company-work {
+					margin: 0;
+					margin-bottom: 2px;
+					line-height: 1.3em;
+					word-break: keep-all;
+
+					.work-list-wrap {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: center;
+						margin: 16px 0 6px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						.work-title {
+							font-size: 1.5em;
+							font-weight: 500;
+							margin-bottom: 6px;
+						}
+						.work-list {
+							font-size: 1.4em;
+							font-weight: 400;
+							margin-top: 4px;
+							line-height: 1.25em;
+						}
+					}
+				}
+			}
+		}
+
+		.inner-contents-skills,
+		.inner-contents-portfolio {
+			position: relative;
+			width: 100%;
+			box-sizing: border-box;
+			margin-bottom: 4px;
+
+			.inner-content-title {
+				font-size: 1.6em;
+				font-weight: 500;
+				margin-bottom: 10px;
+			}
+			.inner-content-line {
+				width: 100%;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.3);
+				margin: 8px 0px 16px;
+			}
+
+			.inner-content-portfolio {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border-radius: 16px;
+				background-color: rgba(255, 255, 255, 0.5);
+				padding: 20px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+
+				.image-wrap {
+					width: 100%;
+					height: 100%;
+					border-radius: 24px;
+					padding: 0;
+					overflow: hidden;
+					background-color: #ddd;
+
+					div {
+						width: 100% !important;
+						height: 100% !important;
+						overflow: visible !important;
+
+						.portfolio-img {
+							object-fit: contain;
+							margin: 0 !important;
+							padding: 0 !important;
+							width: 100% !important;
+							height: unset !important;
+							transform: scale(1.01) !important;
+						}
+					}
+				}
+
+				.inner-content {
+					position: relative;
+					width: 100%;
+					color: #4f504e;
+
+					.year {
+						font-size: 1.3em;
+						margin: 16px 0 2px;
+					}
+
+					.name {
+						font-size: 1.6em;
+						font-weight: 500;
+						margin: 0 0 16px;
+					}
+
+					.label {
+						font-size: 1.2em;
+						font-weight: 300;
+						line-height: 1.6em;
+						margin: 0;
+					}
+
+					.portfolio-button {
+						font-size: 1.2em;
+						color: #4f504e;
+						margin-top: 20px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						position: relative;
+						width: 70px;
+						height: 32px;
+						border-radius: 16px;
+						background-color: rgba(255, 255, 255, 0.5);
+						box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+						transition: background-color 0.25s ease, color 0.25s ease;
+
+						&:hover {
+							background-color: #662cec;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.inner-content-skill {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				border-radius: 16px;
+				background-color: rgba(255, 255, 255, 0.5);
+				padding: 20px 14px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 4px;
+				}
+
+				.skill-icon {
+					width: 80px;
+					height: 80px;
+					border-radius: 24px;
+					margin-right: 20px;
+					background-color: rgba(255, 255, 255, 0.6);
+					box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					@media (min-width: 0px) and (max-width: 660px) {
+						width: 50%;
+					}
+
+					.icon {
+						color: #20272f;
+						size: 5em;
+						height: 5em;
+						width: 5em;
+					}
+				}
+
+				.inner-content {
+					position: relative;
+					width: 190px;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: center;
+					color: #4f504e;
+					font-weight: 300;
+					line-height: 1.6em;
+					word-break: keep-all;
+
+					.skill-name {
+						margin: 0;
+						margin-bottom: 14px;
+						font-size: 2em;
+						font-weight: 500;
+					}
+
+					.skill-label {
+						margin: 0;
+						margin-bottom: 18px;
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+}
