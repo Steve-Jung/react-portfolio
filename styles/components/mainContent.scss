@@ -1,6 +1,9 @@
 .main-content {
 	position: absolute;
 	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
 	overflow: hidden;
 	opacity: 0;
 	padding: 34px 10px 34px 20px;
