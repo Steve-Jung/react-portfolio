@@ -2,18 +2,18 @@
 @import './variables.scss';
 @import 'DatGui.scss';
 
+// Pages
+@import './pages/main.scss';
+@import './pages/profile.scss';
+@import './pages/blog.scss';
+@import './pages/portfolio.scss';
+
 // Components
 @import './components/header.scss';
 @import './components/InitialTransition.scss';
 @import './components/camNavigation.scss';
 @import './components/mainContent.scss';
 @import './components/mainInnerContent.scss';
-
-// Pages
-@import './pages/main.scss';
-@import './pages/profile.scss';
-@import './pages/blog.scss';
-@import './pages/portfolio.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
