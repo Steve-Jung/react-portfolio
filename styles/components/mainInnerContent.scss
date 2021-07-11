@@ -1,11 +1,12 @@
 .main-content {
 	.inner-content-wrap {
 		position: relative;
+		max-width: 328px;
 		color: #20272f;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
+		flex-flow: column wrap;
 		padding-right: 10px;
 
 		.inner-title {
