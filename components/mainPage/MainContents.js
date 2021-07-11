@@ -15,7 +15,7 @@ const MainContents = memo(({ start, currentCamera }) => {
 		if (display === true) {
 			gsap.to(ref.current, {
 				duration: 1.8,
-				// display: 'flex',
+				visibility: 'visible',
 				opacity: 1,
 				xPercent: 0,
 				ease: 'power3.out',
@@ -24,7 +24,7 @@ const MainContents = memo(({ start, currentCamera }) => {
 			gsap.timeline()
 				.to(ref.current, {
 					duration: 0.9,
-					// display: 'none',
+					visibility: 'hidden',
 					opacity: 0,
 					xPercent: 50,
 					ease: 'power3.out',
