@@ -8,11 +8,15 @@ import MainContents from './MainContents';
 /**
  * Select Camera
  */
-const Controls = forwardRef(({ cameraLookAtRef, start, maskDisabled }, ref) => {
-	const [currentCamera, setCurrentCamera] = useState(0);
+const Controls = forwardRef(({
+	cameraLookAtRef,
+	start,
+	prevDisabled,
+	nextDisabled,
+	currentCamera,
+	setCurrentCamera,
+}, ref) => {
 	const [navigationTitle, setNavigationTitle] = useState('');
-	const [prevDisabled, setPrevDisabled] = useState(false);
-	const [nextDisabled, setNextDisabled] = useState(false);
 
 	const prev = useCallback((e) => {
 		e.preventDefault();
@@ -40,26 +44,18 @@ const Controls = forwardRef(({ cameraLookAtRef, start, maskDisabled }, ref) => {
 		if (start) {
 			if (currentCamera === 0) {
 				setNavigationTitle('Landscape');
-				setPrevDisabled(true);
-				setNextDisabled(false);
 				cameraLookAtRef.current.mainSceneHandler();
 			}
 			if (currentCamera === 1) {
 				setNavigationTitle('Ferry');
-				setPrevDisabled(false);
-				setNextDisabled(false);
 				cameraLookAtRef.current.camHandler1();
 			}
 			if (currentCamera === 2) {
 				setNavigationTitle('Portal');
-				setPrevDisabled(false);
-				setNextDisabled(false);
 				cameraLookAtRef.current.camHandler2();
 			}
 			if (currentCamera === 3) {
 				setNavigationTitle('House');
-				setPrevDisabled(false);
-				setNextDisabled(true);
 				cameraLookAtRef.current.camHandler3();
 			}
 		}
@@ -88,17 +84,6 @@ const Controls = forwardRef(({ cameraLookAtRef, start, maskDisabled }, ref) => {
 						<RippleButton />
 					</div>
 				</button>
-				{maskDisabled &&
-					<div className='cam-navigation-mask no-drag'>
-						<div className='fake-inner-cam-btn no-drag'>
-							<RippleButton />
-						</div>
-						<div className='fake-navigation-title no-drag' />
-						<div className='fake-inner-cam-btn no-drag'>
-							<RippleButton />
-						</div>
-					</div>
-				}
 			</div>
 
 

@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-const CameraControls = forwardRef(({ meshRef, setClickstate }, ref) => {
+const CameraControls = forwardRef(({ meshRef, setPrevDisabled, setNextDisabled, currentCamera }, ref) => {
 	const { camera } = useThree();
 
 	const cameraLookAtGeometry = new THREE.BoxBufferGeometry(0.05, 0.05, 0.05);
@@ -39,16 +39,23 @@ const CameraControls = forwardRef(({ meshRef, setClickstate }, ref) => {
 			fov: fov,
 			ease: 'power3.out',
 			onStart: () => {
-				setClickstate(true);
-			},
-			onUpdate: () => {
-
+				setPrevDisabled(true);
+				setNextDisabled(true);
 			},
 			onComplete: () => {
-				setClickstate(false);
+				if (currentCamera === 3) {
+					setPrevDisabled(false);
+					setNextDisabled(true);
+				} else if (currentCamera === 0) {
+					setPrevDisabled(true);
+					setNextDisabled(false);
+				} else {
+					setPrevDisabled(false);
+					setNextDisabled(false);
+				}
 			},
 		});
-	}, [meshRef, camera, setClickstate]);
+	}, [meshRef, camera, setPrevDisabled, setNextDisabled, currentCamera]);
 
 	useImperativeHandle(ref, () => ({
 		mainSceneHandler() {

@@ -53,7 +53,13 @@ const PortfolioContent = ({ object }) => {
   return (
     <>
       <motion.div
-        exit={{ opacity: 0 }}
+				exit={{
+					opacity: 0,
+					transition: {
+						duration: 0.45,
+						ease: [0.6, -0.05, 0.01, 0.99],
+					},
+				}}
         className="portfolio-page"
 			>
 				<motion.div
@@ -97,7 +103,6 @@ const PortfolioContent = ({ object }) => {
 								))}
 							</div>
 							{object.videoId &&
-								// <YouTube className='content-youtube' videoId={object.videoId} />
 								<Youtube videoId={object.videoId} />
 							}
 						</motion.div>

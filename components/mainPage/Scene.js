@@ -29,20 +29,9 @@ const Scene = memo(() => {
 	const controlsRef = useRef(null);
 
 	const [start, setStart] = useState(false);
-	const [maskDisabled, setMaskDisabled] = useState(false);
-	const [clickState, setClickstate] = useState(false);
-
-	useEffect(() => {
-		if (clickState) {
-			setMaskDisabled(true);
-		} else {
-			setMaskDisabled(false);
-		}
-
-		return () => {
-			setMaskDisabled(false);
-		}
-	}, [clickState]);
+	const [currentCamera, setCurrentCamera] = useState(0);
+	const [prevDisabled, setPrevDisabled] = useState(false);
+	const [nextDisabled, setNextDisabled] = useState(false);
 
 	const mainSceneHandler = useCallback((e) => {
 		e.preventDefault();
@@ -131,7 +120,13 @@ const Scene = memo(() => {
 
 				{/* <axesHelper args={[3]} /> */}
 
-				<CameraControls ref={cameraLookAtRef} meshRef={meshRef} setClickstate={setClickstate} />
+				<CameraControls
+					ref={cameraLookAtRef}
+					meshRef={meshRef}
+					setPrevDisabled={setPrevDisabled}
+					setNextDisabled={setNextDisabled}
+					currentCamera={currentCamera}
+				/>
 			</Canvas>
 
 			<div ref={mainRef} className='main-title-wrap'>
@@ -146,7 +141,11 @@ const Scene = memo(() => {
 				ref={controlsRef}
 				cameraLookAtRef={cameraLookAtRef}
 				start={start}
-				maskDisabled={maskDisabled}
+				// maskDisabled={maskDisabled}
+				prevDisabled={prevDisabled}
+				nextDisabled={nextDisabled}
+				currentCamera={currentCamera}
+				setCurrentCamera={setCurrentCamera}
 			/>
 		</>
 	);

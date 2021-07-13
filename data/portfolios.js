@@ -96,10 +96,10 @@ const portfolios = [
 	},
 	{
 		id: 2,
-		name: '코어독학재수학원',
+		name: 'Core Study',
 		page: 'core',
 		year: '2017',
-		shortContent: '싱글페이지 학원사이트',
+		shortContent: '싱글페이지 코어독학재수학원 사이트',
 		spec: 'HTML, CSS, JavaScript, jQuery, PHP, WordPress',
 		content: '싱글페이지 학원사이트',
 		thumb: coreAcademyImg,
@@ -119,7 +119,7 @@ const portfolios = [
 	},
 	{
 		id: 3,
-		name: '와인앤리큐어',
+		name: 'Wine & Liquor',
 		page: 'wine',
 		year: '2017',
 		shortContent: '해외 주류 수입사',
@@ -136,7 +136,7 @@ const portfolios = [
 	},
 	{
 		id: 4,
-		name: '제타플랜',
+		name: 'ZetaPlan',
 		page: 'zetaplan',
 		year: '2017',
 		shortContent: '기업 사이트',
@@ -153,7 +153,7 @@ const portfolios = [
 	},
 	{
 		id: 5,
-		name: '마케티노',
+		name: 'Marketino',
 		page: 'marketino',
 		year: '2018',
 		shortContent: '블로그 체험단 사이트',
@@ -179,7 +179,7 @@ const portfolios = [
 	},
 	{
 		id: 6,
-		name: '365차한의원',
+		name: '365 Cha Clinic',
 		page: 'chaClinic',
 		year: '2018',
 		shortContent: '한의원 사이트',

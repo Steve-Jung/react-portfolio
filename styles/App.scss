@@ -4,8 +4,6 @@
 
 // Pages
 @import './pages/main.scss';
-@import './pages/profile.scss';
-@import './pages/blog.scss';
 @import './pages/portfolio.scss';
 
 // Components
@@ -14,6 +12,7 @@
 @import './components/camNavigation.scss';
 @import './components/mainContent.scss';
 @import './components/mainInnerContent.scss';
+@import './components/navigation.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
@@ -74,7 +73,7 @@ h5 {
 a {
 	text-decoration: none;
 	color: $black;
-	transition: ease-in-out 1s;
+	// transition: ease-in-out 0.25s;
 }
 
 ul {
@@ -105,9 +104,9 @@ ul {
 		font-weight: 300;
 		color: $secondary;
 		margin-bottom: 0.5rem;
-		@media (max-width: 680px) {
-			margin-bottom: 0.75rem;
-		}
+		// @media (max-width: 680px) {
+		// 	margin-bottom: 0.75rem;
+		// }
 		a {
 			color: $secondary;
 		}

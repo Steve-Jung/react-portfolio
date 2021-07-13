@@ -75,40 +75,4 @@
 		text-align: center;
 		color: #fff;
 	}
-
-	.cam-navigation-mask {
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background: transparent;
-
-		.fake-inner-cam-btn {
-			display: flex;
-			overflow: hidden;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			border: none;
-			outline: none;
-			text-decoration: none;
-			width: 60px;
-			height: 100%;
-			background: transparent;
-		}
-
-		.fake-navigation-title {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100px;
-			height: 100%;
-			text-align: center;
-			background: transparent;
-		}
-	}
 }
