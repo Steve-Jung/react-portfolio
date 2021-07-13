@@ -2,24 +2,44 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SimpleBar from 'simplebar-react';
+import { useRouter } from 'next/router';
 
 import portfolios from '../../data/portfolios';
 import projects from '../../data/projects';
 
 const CustomPortfolio = ({ name, page, thumb, shortContent, year, project }) => {
+	const router = useRouter();
+
+	const handlePortfolioRoute = (page) => {
+		router.push(`/portfolio/${page}`)
+	}
+
+	const handleProjectRoute = (page) => {
+		router.push(`/project/${page}`)
+	}
+
+
 	return (
 		<>
 			<div className='inner-content-portfolio'>
-				<div className='image-wrap'>
-					<Image
-						className={'portfolio-img'}
-						src={thumb}
-						alt={name}
-						// width={'278px'}
-						// height={'278px'}
-						placeholder='blur'
-					/>
-				</div>
+				{project
+					? <div className='image-wrap' onClick={() => handleProjectRoute(page)}>
+							<Image
+								className={'portfolio-img'}
+								src={thumb}
+								alt={name}
+								placeholder='blur'
+							/>
+						</div>
+					: <div className='image-wrap' onClick={() => handlePortfolioRoute(page)}>
+							<Image
+								className={'portfolio-img'}
+								src={thumb}
+								alt={name}
+								placeholder='blur'
+							/>
+						</div>
+				}
 				<div className='inner-content'>
 					<p className='year'>{year}</p>
 					<p className='name'>{name}</p>
