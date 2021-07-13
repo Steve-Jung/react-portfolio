@@ -63,13 +63,13 @@ const CameraControls = forwardRef(({ meshRef, setPrevDisabled, setNextDisabled, 
 			camAction(1.5, 3.5, 20, [0, 0.5, 0 ], [-6, 3, 6]);
 		},
 		camHandler1() {
-			camAction(1.8, 1.8, 20, [-1, 0.37, 1.7], [-2.4, 0.5, 3.3]);
+			camAction(1.5, 1.5, 20, [-1, 0.37, 1.7], [-2.4, 0.5, 3.3]);
 		},
 		camHandler2() {
-			camAction(1.8, 1.8, 20, [0.48, 0.5, 0.2], [-0.8, 1.3, 2]);
+			camAction(1.5, 1.5, 20, [0.48, 0.5, 0.2], [-0.8, 1.3, 2]);
 		},
 		camHandler3() {
-			camAction(1.8, 1.8, 20, [-1.25, 0.6, -0.6], [-1.7, 1, 2]);
+			camAction(1.5, 1.5, 20, [-1.25, 0.6, -0.6], [-1.7, 1, 2]);
 		}
 	}));
 
