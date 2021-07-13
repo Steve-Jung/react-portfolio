@@ -50,7 +50,7 @@ export default function Custom404() {
 					exit={{
 						opacity: 0,
 						transition: {
-							duration: 0.5,
+							duration: 0.8,
 							ease: [0.6, -0.05, 0.01, 0.99],
 						},
 					}}
