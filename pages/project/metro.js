@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Metro = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[3].name}
+        page={`/project/${projects[3].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[3]} />
       </Layout>

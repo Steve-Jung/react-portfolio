@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Marketino = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={portfolios[4].name}
+        page={`/portfolio/${portfolios[4].page}`}
+      />
       <Layout>
 				<PortfolioContent object={portfolios[4]} />
       </Layout>

@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Lamborghini = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[1].name}
+        page={`/project/${projects[1].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[1]} />
       </Layout>

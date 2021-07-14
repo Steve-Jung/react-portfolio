@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const ZetaPlan = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={portfolios[3].name}
+        page={`/portfolio/${portfolios[3].page}`}
+      />
       <Layout>
 				<PortfolioContent object={portfolios[3]} />
       </Layout>

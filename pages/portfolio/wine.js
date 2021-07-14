@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Wine = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={portfolios[2].name}
+        page={`/portfolio/${portfolios[2].page}`}
+      />
       <Layout>
 				<PortfolioContent object={portfolios[2]} />
       </Layout>

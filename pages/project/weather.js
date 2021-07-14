@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Weather = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[5].name}
+        page={`/project/${projects[5].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[5]} />
       </Layout>

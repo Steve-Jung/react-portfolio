@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Sorleino = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[2].name}
+        page={`/project/${projects[2].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[2]} />
       </Layout>

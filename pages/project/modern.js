@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const Modern = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[4].name}
+        page={`/project/${projects[4].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[4]} />
       </Layout>

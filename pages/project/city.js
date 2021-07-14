@@ -9,7 +9,10 @@ import PortfolioContent from '../../components/portfolio/PortfolioContent';
 const City = () => {
   return (
     <>
-      <Header />
+      <Header
+        subtitle={projects[0].name}
+        page={`/project/${projects[0].page}`}
+      />
       <Layout>
 				<PortfolioContent object={projects[0]} />
       </Layout>
