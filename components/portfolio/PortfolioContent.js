@@ -44,6 +44,13 @@ const Youtube = ({ videoId }) => {
 				height='400px'
 				controls={true}
 				url={`https://www.youtube.com/watch?v=${videoId}`}
+				config={{
+					youtube: {
+						playerVars: {
+							origin: 'https://jungjisub.vercel.app'
+						}
+					}
+				}}
 			/>
 		</>
 	)
