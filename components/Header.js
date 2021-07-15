@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import MainPageImage from '../public/images/photo/jungjisub_main.png';
+import MainPageImage from '../public/images/photo/jungjisub_main.jpg';
 
 const Header = ({ subtitle, page }) => {
   return (
