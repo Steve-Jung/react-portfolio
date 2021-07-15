@@ -19,7 +19,7 @@ const Header = ({ subtitle, page }) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="정지섭의 포트폴리오" />
       <meta property="og:description" content="정지섭의 포트폴리오 사이트입니다" />
-      <meta property="og:image" content={`https://jungjisub.vercel.app/${MainPageImage.src}`} />
+      <meta property="og:image" content={`https://jungjisub.vercel.app${MainPageImage.src}`} />
       <meta property="og:url" content={page ? `https://jungjisub.vercel.app${page}` : 'https://jungjisub.vercel.app'} />
     </Head>
   )
